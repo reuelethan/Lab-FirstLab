@@ -1,97 +1,183 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-*{
-    font-family: 'Open Sans', sans-serif;
-    
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+* {
+    font-family: "Open Sans", sans-serif;
 }
-body{
-    background-color:#f9fafc ;
-    /* margin-left: 10%; */
+
+body {
+    background-color: #f9fafc;
+    font-size: 16px;
 }
-ul{
+
+ul {
     list-style-type: none;
     list-style: none;
     padding-left: 0%;
     color: #000;
-
+    margin-top: 0px;
 }
- li{
+
+li {
     border: 10px solid rgba(0, 128, 0, 0);
     color: #69696a;
-   
-} 
-.Button{
-    color:rgb(255, 255, 255);
+}
+
+.Button {
+    color: rgb(255, 255, 255);
     text-align: center;
     background-color: #000;
     width: 90%;
     left: 20%;
     padding-left: 0px;
-}
-li:nth-of-type(1){
-    color: #000;
-}
-
-h1{
-    padding-left: 0%;
-    margin-left: 0%;
-}
-.Button{
     margin-left: 0%;
     border-radius: 50px;
     padding-bottom: 1%;
-
 }
 
-p{
-    border-left: .3rem solid #69696a;
+h1 {
+    padding-left: 0%;
+    margin-left: 0%;
+    font-size: 30px;
+}
+
+p {
+    border-left: 0.3rem solid #69696a;
     padding-left: 1%;
     margin-left: 3%;
-
-}
-footer{
-    color:rgb(255, 255, 255);
-    text-align: center;
-    background-color: #000;
-    width: 90%;
-    left: 20%;
-    margin-left: 0%;
-    border-radius: 50px;
-    padding-top: 10px;
-    padding-bottom: 2%;
-
 }
 
+/* media query stuff goes here */
 
+@media only screen and (min-width: 768px) {
+    .left {
+        width: 50%;
+        margin-left: 0%;
+    }
 
+    .first {
+        /* border: solid green 5px; */
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.81rem;
+    }
 
+    header {
+        padding-top: 4px;
+    }
 
+    ul {
+        display: flex;
+    }
 
+    .Button {
+        width: 75px;
+    }
 
+    h1 {
+        margin-top: 115.1px;
+        /* border: orchid dashed 5px; */
+    }
 
+    p {
+        margin-left: 2%;
+        /* border: yellowgreen dashed 5px; */
+    }
 
+    .right {
+        display: flex;
+        width: 47%;
+        height: 335.11px;
+        /* border: violet solid 10px; */
+        position: relative;
+        float: right;
+        bottom: 211.7px;
+    }
+
+    section {
+        display: flex;
+    }
+
+    span {
+        /* border: 4px solid teal; */
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+    }
+
+    .Large {
+        background-color: rgba(247, 136, 167, 0.6);
+        align-self: flex-end;
+        position: absolute;
+        bottom: 101px;
+        width: 234px;
+        height: 234px;
+        right: 81px;
+        z-index: 1;
+    }
+
+    .Middle {
+        background-color: rgba(247, 193, 162, 0.7);
+        position: absolute;
+        bottom: 0px;
+        width: 180px;
+        height: 180px;
+        right: 14px;
+        z-index: 3;
+    }
+
+    .Small {
+        background-color: rgba(207, 130, 213, 0.6);
+        position: absolute;
+        bottom: 151px;
+        width: 100px;
+        height: 100px;
+        right: 31px;
+        z-index: 2;
+    }
+
+    .Bottom {
+        width: 100px;
+        position: fixed;
+        bottom: 0px;
+        right: 300px;
+        left: 430px;
+        border-bottom-width: 3px;
+        align-self: center;
+    }
+
+    .FinalBoss {
+        /* border: 10px solid black; */
+        height: 100px;
+    }
+}
 
 /* Build Specifications:
-● Properly link styles.css in the head of the HTML file.✓
-● Properly link the “Open Sans” font in the head of the HTML file.✓
-● Properly use “Open Sans” in the styles.css file.✓
-● The background color of the body should be set to #f9fafc.✓
-● Use #69696a for the colors that look gray.✓
-● Use #000 for colors that look black.✓
-● Use #FFF for the “Hire Us” and “Scroll Down” text.✓
-● Remove text-decoration from anchor tags. -- Idk
-● Border-left of description is implemented✓
+● Write a media query using min-width syntax to change styles at 768px.✓
+● Flex properties are used to change the layout of the navigation from column to row.✓
+● A flex property is used to separate “chirpus inc” and the navigation items.
+● The lorem ipsum section takes up half the width of the page.
+● Use rgba(247, 136, 167, 0.6) for the largest circle.
+● Use rgba(247, 193, 162, 0.7) for the medium sized circle.
+● Use rgba(207, 130, 213, 0.6) for the smallest circle.
+● Use a combination of position, top, right, bottom, and/or left to position the circles on
+the page. (you don’t have to use them all)
+● Circles have fixed widths and heights.
+● Circles should not be displayed in the mobile view.
+● Use a combination of position, top, right, bottom, and left to position the scroll down
+button on the page. (you don’t have to use them all)
 Tests:
 Overview: These tests are used to check the accuracy of your lab. Below you will find a description of each test.
-1. All CSS is in a styles.css, which is linked in the head of the HTML file.✓
-2. “Open Sans” font is imported and applied successfully to all text on the page.✓
-3. The background color of the body should be set to #f9fafc.✓
-4. Navigation links are stacked vertically, as shown. --not not nav links but they are vertical u know
-5. Navigation links are gray (#69696a).✓
-6. Navigation links have no underline.✓
-7. Navigation links are still gray with no underline after clicking them (visited).✓
-8. “Hire Us” and “Scroll Down” are black (#FFF) with white (#000) text.✓
-9. “Hire Us” and “Scroll Down” have fully rounded ends.✓
-10. “Hire Us” and “Scroll Down” stretch across entire display (with some space between
-edges as shown).✓
-11. “Hire Us” and “Scroll Down” text is centered.✓
-12. Lorem, ipsum paragraph has the gray (#69696a) vertical bar on left.✓ */
+1. Write a media query using min-width syntax to change styles at 768px.
+2. Flex properties are used to change the layout of the navigation from column to row.
+3. A flex property is used to separate “chirpus inc” and the navigation items.
+4. The lorem ipsum section takes up half the width of the page.
+5. Circles are properly colored
+a. Use rgba(247, 136, 167, 0.6) for the largest circle.
+b. Use rgba(247, 193, 162, 0.7) for the medium-sized circle. c. Use rgba(207, 130, 213, 0.6) for the smallest circle.
+6. Use a combination of position, top, right, bottom, and left to position the circles on the page. (you don’t have to use them all)
+7. Circles have fixed widths and heights.
+8. Circles should not be displayed in the mobile view.
+9. “Hire Us” and “Scroll Down” buttons appear in the correct location and size both for
+desktop and for mobile.
+10. Use a combination of position, top, right, bottom, and left to position the “Scroll Down”
+button on the page. (you don’t have to use them all) */
